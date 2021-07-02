@@ -1,0 +1,54 @@
+<%- include("partials/header") -%>
+
+
+<div class="big-container container">
+  <div class="button">
+    <a href="/add">Nouveau client</a>
+  </div>
+  <form  action="/delete" method="post" class="form">
+  
+    <table class="table">
+      <thead>
+        <tr class="thead-dark">
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Postom</th>
+          <th>Prenom</th>
+          <th>Email</th>
+          <th>Tel</th>
+          <th>Type visa</th>
+          <th>Montant Payer</th>
+          <th>Montant Facturer</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i = 0; i < listClients.length; i++){%>
+        <tr>
+          <td><%= i+1 %></td>
+          <td><%= listClients[i].nom %></td>
+          <td><%= listClients[i].postnom %></td>
+          <td><%= listClients[i].prenom %></td>
+          <td><%= listClients[i].email %></td>
+          <td><%= listClients[i].Tel %></td>
+          <td><%= listClients[i].typevisa %></td>
+          <td><%= listClients[i].montantpaye %></td>
+          <td><%= listClients[i].montantfacture %></td>
+          <td><%= listClients[i].date %></td>
+          <td ><span ><a href="/client/<%= listClients[i].nom %>" class="modif">Modif</a>
+            <!--<a href="/delete" value="<%= listClients[i]._id %>" name="suppr" onChange="this.form.submit()" class="suppr">Suppr</a>
+                -->
+                <button type="submit" value="<%= listClients[i]._id %>"class="btn btn-danger" name="button" id="delete">sppr</button>
+            </span></td>
+
+        </tr>
+        <% } %>
+
+
+      </tbody>
+    </table>
+  </form>
+</div>
+
+<%- include("partials/footer") -%>

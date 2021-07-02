@@ -1,0 +1,64 @@
+<%- include("partials/header") -%>
+
+  <div class="container col-lg-6 m-auto">
+    <div class="form-addData">
+      <div class="button">
+        <a href="/" >Back to home</a>
+      </div>
+        <form class="form-group" id="form-add" action="/add" method="post">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Nom</label>
+              <input type="text" name="nom"  class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Post-Nom</label>
+              <input type="text" name="postnom"  class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Prenom</label>
+              <input type="text" name="prenom" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Email</label>
+              <input type="text" name="email" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Tel</label>
+              <input type="text" name="telephone" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Type visa</label>
+              <input type="text" name="typevisa" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Montant payer</label>
+              <input type="text" name="montantpayer" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Montant Facturer</label>
+              <input type="text" name="montantfacturer" class="form-control">
+            </div>
+          </div>
+        <!--  <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Date</label>
+              <input type="text" name="date" value="" class="form-control">
+            </div>
+          </div>-->
+          <button type="submit" name="button" class="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
+
+<!--<%- include("partials/footer") -%>-->

@@ -1,0 +1,65 @@
+<%- include("partials/header") -%>
+
+  <div class="container col-lg-6 m-auto">
+    <div class="form-addData">
+      <div class="button">
+        <a href="/" >Back to accueil</a>
+      </div>
+        <form class="form-group" action="/modif" method="post">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Nom</label>
+              <input type="text" name="nom" value="<%= clientFound.nom %>" class="form-control">
+              <input type="hidden" name="myId" value="<%= clientFound._id %>" class="hidden">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Post-Nom</label>
+              <input type="text" name="postnom" value="<%= clientFound.postnom %>" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Prenom</label>
+              <input type="text" name="prenom" value="<%= clientFound.prenom %>"class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Email</label>
+              <input type="text" name="email" value="<%= clientFound.email %>"class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Tel</label>
+              <input type="text" name="telephone" value="<%= clientFound.tel %>" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Type visa</label>
+              <input type="text" name="typevisa" value="<%= clientFound.typevisa %>" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Montant payer</label>
+              <input type="text" name="montantpayer" value="<%= clientFound.montantpaye %>" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label for=""class="form-label">Montant Facturer</label>
+              <input type="text" name="montantfacturer" value="<%= clientFound.montantfacture %>" class="form-control">
+            </div>
+          </div>
+        <!--  <div class="row">
+            <div class="col-lg-6">
+              <label for=""class="form-label">Date</label>
+              <input type="text" name="date" value="" class="form-control">
+            </div>
+          </div>-->
+          <button type="submit" name="button" class="btn btn-primary button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
+
+<%- include("partials/footer") -%>
